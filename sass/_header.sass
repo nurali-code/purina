@@ -1,0 +1,140 @@
+.header
+    padding: 26px 15px  19px
+    background-color: $prime
+    color: white
+    .container
+        position: relative
+
+    a
+        color: white
+
+    .logo
+        max-width: 175px
+
+    .soc 
+        gap: 15px
+        margin-left: auto 
+        // position: absolute
+        // right: 15px
+        &__heading 
+            display: block
+            font-size: 10px
+            font-weight: 400 
+
+        img 
+            display: inline-block
+            width: 24px
+
+    .nav 
+        margin: 0 
+        width: 75%
+        &__link 
+            display: block
+            padding: 12px 15px
+            font-weight: 500
+            font-size: 14px
+            line-height: 21px
+            &:hover
+                opacity: .8
+                text-decoration: underline
+                
+
+    .btn
+        font-size: 14px
+        padding: 12px 20px
+        margin: 15px 0 0 0
+        &:hover
+            color: #000
+
+        &___menu
+            display: none
+
+    @media screen and ( max-width: 1100px )
+        .btn_menu
+            display: inline-block
+            z-index: 9999
+            width: 48px
+            height: 48px
+            position: relative
+            z-index: 99999
+            span
+                pointer-events: none
+                display: block
+                width: 80%
+                margin: 0 auto
+                height: 2px
+                background: #000
+                position: relative
+                z-index: 1
+                transition: all ease .3s
+                &::before,
+                &::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 2px
+                    background-color: #000
+                    position: absolute
+                    left: 0
+                    top: -10px
+                    transition: all ease .3s
+
+                &::after
+                    top: 10px
+
+            &.is_active
+                span
+                    background-color: rgba(white, 0)
+                    &::before
+                        top: 0
+                        transform: rotate(45deg)
+                        background-color: white
+
+                    &::after
+                        top: 0
+                        transform: rotate(-45deg)
+                        background-color: white
+
+        .logo
+            gap: 8px
+            &__img
+                width: 45px
+
+            &__text
+                font-size: 11px
+
+            b
+                margin: 0
+
+        .nav
+            position: fixed
+            top: 0
+            right: 0
+            max-width: 380px
+            width: 80%
+            flex-direction: column
+            box-shadow: -320px 0 0 calc( 100vw - 320px ) rgba(0, 0, 0, .7)
+            height: 100vh
+            background-color: #000
+            z-index: 999
+            padding: 60px 30px 38px
+            transition: all ease .4s
+            opacity: 0
+            visibility: hidden
+            transform: translateX(100%)
+            display: block
+            &__link
+                padding: 10px
+                font-size: 18px
+                display: block
+                color: #fff
+                &:hover
+                    text-decoration: underline
+
+            .btn_2
+                margin-top: 10px
+
+            &.is_active
+                opacity: 1
+                visibility: visible
+                transform: translateX(0)

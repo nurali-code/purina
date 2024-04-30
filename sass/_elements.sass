@@ -1,0 +1,99 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$prime: #ED1C25
+$sec: #F5F1E5
+$dark: #1E1E1E
+
+html
+    scroll-behavior: smooth
+
+body
+    color: white
+    background-color: #fff
+    color: $dark
+    font-family: 'Ford Antenna', sans-serif
+    min-height: 100vh
+
+    &.is_active
+        overflow: hidden
+
+img
+    max-width: 100%
+
+.container
+    max-width: 1210px
+    width: 100%
+    padding: 0 15px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+h1
+    font-size: 45px
+    font-weight: 600
+    margin: 4px 0 10px
+
+h2, .h2 
+    font-size: 35px
+    line-height: 130%
+    margin: 0 0 50px
+
+a,
+button
+    color: #000
+    text-decoration: none
+    transition: all ease .2s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+label
+    display: block
+
+input
+    display: block
+    width: 100%
+    border-radius: 5px
+    height: 50px
+    border: 1px solid #000
+    padding: 0 15px
+    margin-bottom: 20px
+
+.fx
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.btn
+    display: block
+    font-size: 14px
+    font-style: normal
+    font-weight: 700
+    line-height: 120%
+    letter-spacing: 0.16px
+    border: 1px solid $prime
+    background-color: #fff
+    color: #000
+    padding: 12px 22px 12px
+    text-align: center
+
+    &:hover
+        background-color: $prime 
+        color: white
+
+.tag 
+    font-size: 22px
+    font-weight: 500
+    line-height: 30.8px
+    color: #797673
+
+section
+    padding: 55px 0
+
+@media screen and ( max-width: 1000px )
+    h1

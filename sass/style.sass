@@ -1,0 +1,115 @@
+@import 'normolize'
+// @import 'fonts'
+@import 'elements'
+@import 'header'
+
+.main
+    padding: 130px 0 60px
+    margin-bottom: 55px
+    h1
+        text-transform: uppercase
+        color: $prime
+        font-weight: 900
+        margin: 0 0 10px
+
+    &__text
+        color: $dark
+        max-width: 50%
+        font-size: 33px
+        line-height: 46.2px
+        font-weight: 500
+        margin: 0 0 22px
+
+    &__img
+        position: absolute
+        z-index: 1
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        max-width: 50%
+
+    &-event
+        justify-content: flex-start
+        background-color: #EEEEEE
+        padding: 22px 0
+        margin: 56px 0 0
+        position: relative
+        gap: 25px
+        max-width: 80%
+        &::before
+            content: ''
+            display: block
+            width: calc( 100% + 120px )
+            height: 100%
+            left: 50%
+            top: 0
+            transform: translateX(-50%)
+            background-color: #EEEEEE
+            position: absolute
+            z-index: -1
+
+    &-item
+        gap: 15px
+        border-right: 1px solid #DBDBDB
+        padding-right: 25px
+        .label
+            text-align: right
+            font-size: 12px
+            line-height: 18px
+            color: #7A7775
+            display: block
+
+        .heading
+            font-weight: 700
+            font-size: 25px
+            color: #000000
+
+    .btn
+        position: relative
+        z-index: 1
+
+.exhibition
+    text-align: center
+    .fx 
+        align-items: stretch
+        
+    &__icon
+        display: block
+        margin: 0 auto
+
+    &__heading
+        margin: 30px 0 25px
+        color: $prime
+
+    &__text
+        font-size: 14px
+        line-height: 21px
+        letter-spacing: 0.2px
+
+    &-item
+        background-color: $sec
+        padding: 62px 33px 60px
+        max-width: 350px
+
+    &-img
+        text-align: right
+        img
+            max-width: 211px
+            max-height: 218px
+            display: block
+            margin: 0 0 20px auto
+            &:last-of-type
+                margin: 0 0 0 auto
+
+        &.--second
+            img
+                margin-left: 0
+
+    &-title
+        font-size: 18px
+        line-height: 25.2px
+        max-width: 720px
+        font-weight: 600
+        margin: 0 auto
+        padding: 30px 25px 25px
+        border-bottom: 1px solid $prime
