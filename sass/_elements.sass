@@ -25,20 +25,23 @@ body
 img
     max-width: 100%
 
-.container
+.container,
+.container-wide
     max-width: 1210px
     width: 100%
     padding: 0 15px
     margin: 0 auto
     position: relative
     z-index: 1
+    &-wide
+        max-width: 1278px
 
 h1
     font-size: 45px
     font-weight: 600
     margin: 4px 0 10px
 
-h2, .h2 
+h2, .h2
     font-size: 35px
     line-height: 130%
     margin: 0 0 50px
@@ -83,10 +86,10 @@ input
     text-align: center
 
     &:hover
-        background-color: $prime 
+        background-color: $prime
         color: white
 
-.tag 
+.tag
     font-size: 22px
     font-weight: 500
     line-height: 30.8px
@@ -94,6 +97,18 @@ input
 
 section
     padding: 55px 0
+
+ul
+    padding: 0
+    list-style: none
+    li
+        font-size: 14px
+        color: #97938F
+        padding: 3px 0 2px 34px
+        background-image: url('../img/check.svg')
+        background-repeat: no-repeat
+        background-position: center left
+        background-size: 24px auto
 
 @media screen and ( max-width: 1000px )
     h1
