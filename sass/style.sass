@@ -17,7 +17,6 @@
         max-width: 50%
         font-size: 33px
         line-height: 46.2px
-        font-weight: 500
         margin: 0 0 22px
 
     &__img
@@ -70,7 +69,7 @@
 
 .exhibition
     text-align: center
-    .fx 
+    .fx
         align-items: stretch
 
     &__icon
@@ -121,18 +120,168 @@
     .container-wide
         margin-bottom: 120px
 
-    h2 
-        padding-right: 30px 
-        margin: 0
+    h2
+        padding-right: 30px
+
+    &__flags
+        display: block
+        width: 100%
+        margin: 0 0 95px
 
     &-title
-        padding-left: 30px 
-        border-left: 1px solid #6F6F6F
-        ul 
+        ul
             justify-content: flex-start
             gap: 20px
 
-    &__text 
+    &__text
         font-size: 19px
         font-weight: 600
         margin: 0 0 18px
+
+    &-items
+        align-items: stretch
+
+    &-item
+        width: 32%
+        padding: 40px
+        border: 2px solid #ED1C25
+        background-color: #FFFFFF
+        &__heading
+            font-size: 24px
+            line-height: 33.6px
+            font-weight: 600
+            text-align: left
+            &::after
+                content: ''
+                display: block
+                width: 46px
+                background-color: $prime
+                height: 1px
+                margin: 30px 0
+
+        &__text
+            display: block
+            font-size: 15px
+            line-height: 22.5px
+
+.timeline
+    width: 49%
+    border: 2px solid #ED1C25
+    border-left-width: 10px
+    font-size: 18px
+    font-weight: 600
+    color: #1E1E1E
+    background-color: #fff
+    padding: 8px 0
+    margin-bottom: 15px
+    min-height: 80px
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 1
+    &::before
+        content: ''
+        display: block
+        width: 161px
+        height: 100%
+        position: absolute
+        z-index: -11
+        left: 0
+        background-color: $prime
+        transform: scaleX(0)
+        transition: all ease .3s
+        transform-origin: 0 0
+
+    &__time
+        min-width: 159px
+        transition: all ease .3s
+        display: block
+        text-align: center
+
+    &__text
+        padding: 17px
+        display: block
+        border-left: 2px solid #ED1C25
+
+    &:hover
+        &::before
+            transform: scaleX(1)
+
+        .timeline__time
+            color: white
+
+.shelters
+    padding: 150px 0 0
+    .container-wide
+        margin-bottom: 50px
+
+    .fxw 
+        gap: 20px
+
+    &__pets 
+        display: block
+        width: 100%
+        margin-top: 50px
+
+.shelter
+    padding: 22px 25px 24px 0
+    display: flex
+    border: 3px solid $prime
+    width: calc( 50% - 10px )
+    transition: .3s ease all
+    &:hover
+        transform: scale(1.02)
+    .col
+        padding: 8px 20px
+        flex-direction: column
+        min-width: 208px
+        border-right: 2px solid #D7D7D770
+        margin-right: 22px
+
+    &__heading
+        color: $prime
+        font-size: 24px
+        line-height: 24px
+        font-weight: 700
+        text-align: center
+        margin: 0
+
+    &-title 
+        padding: 6px 0
+        flex-direction: column
+        align-items: flex-start
+
+    &__text
+        font-size: 12px
+        line-height: 18px
+        margin: 0 0 20px
+
+    &__middle
+        text-align: right
+        padding: 30px 0
+        font-size: 14px
+        b 
+            font-size: 16px
+
+    &__descr
+        text-align: center
+        font-size: 10px
+        line-height: 15px
+
+    &__link 
+        display: block
+        font-size: 16px
+        text-decoration: underline
+
+    &-tags
+        padding: 0px 0 20px
+        gap: 25px
+        justify-content: start
+
+    &__tag
+        font-size: 18px
+        line-height: 27px
+        img
+            display: inline-block
+            vertical-align: middle
+            margin-right: 10px

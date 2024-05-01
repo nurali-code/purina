@@ -14,6 +14,7 @@ html
 
 body
     color: white
+    font-weight: 500
     background-color: #fff
     color: $dark
     font-family: 'Ford Antenna', sans-serif
@@ -25,17 +26,6 @@ body
 img
     max-width: 100%
 
-.container,
-.container-wide
-    max-width: 1210px
-    width: 100%
-    padding: 0 15px
-    margin: 0 auto
-    position: relative
-    z-index: 1
-    &-wide
-        max-width: 1278px
-
 h1
     font-size: 45px
     font-weight: 600
@@ -45,6 +35,10 @@ h2, .h2
     font-size: 35px
     line-height: 130%
     margin: 0 0 50px
+
+h3, .h3
+    font-size: 35px
+    margin: 0 0 36px
 
 a,
 button
@@ -67,10 +61,35 @@ input
     padding: 0 15px
     margin-bottom: 20px
 
-.fx
+.fx, .fxw
     display: flex
     align-items: center
     justify-content: space-between
+
+.container,
+.container-wide
+    max-width: 1210px
+    width: 100%
+    padding: 0 15px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+    &-wide
+        max-width: 1278px
+        gap: 30px
+        justify-content: flex-start
+        h2
+            margin: 0
+            padding-right: 30px
+            border-right: 1px solid #6F6F6F
+
+.fxw
+    align-items: stretch
+    flex-wrap: wrap
+
+mark
+    color: $prime
+    background-color: rgba(0, 0, 0, 0)
 
 .btn
     display: block
