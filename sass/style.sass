@@ -214,7 +214,7 @@
 
     @media screen and ( max-width: 700px )
         padding: 35px 0 75px
-        h2 
+        h2
             margin-bottom: 15px
 
         .fx
@@ -228,11 +228,11 @@
             &.--second
                 order: 2
 
-        &-img 
+        &-img
             width: 100%
             display: flex
             gap: 3px
-            img 
+            img
                 max-width: unset
                 width: calc( 50% - 1.5px )
                 max-height: unset
@@ -257,7 +257,7 @@
             font-size: 10px
             line-height: 14.5px
 
-        &-title 
+        &-title
             font-size: 11px
             line-height: 15.4px
             padding: 20px 0
@@ -313,6 +313,82 @@
             font-size: 15px
             line-height: 22.5px
 
+    @media screen and ( max-width: 1200px )
+        padding: 100px 0
+        .container
+            &-wide
+                display: block
+                margin-bottom: 55px
+
+        &__text
+            margin-bottom: 21px
+
+        ul
+            width: 100vw
+            position: relative
+            left: -15px
+            padding: 0 15px
+            overflow-x: scroll
+            -ms-overflow-style: none
+            scrollbar-width: none
+            &::-webkit-scrollbar
+                display: none
+                width: 0
+                height: 0
+            li
+                width: fit-content
+                white-space: nowrap
+
+    @media screen and ( max-width: 1000px )
+        padding: 55px 0 84px
+
+        &-items
+            justify-content: flex-start
+            gap: 8px
+            width: 100vw
+            position: relative
+            overflow-x: scroll
+            left: -15px
+            padding: 0 15px 0
+            -ms-overflow-style: none
+            scrollbar-width: none
+            &::-webkit-scrollbar
+                display: none
+                width: 0
+                height: 0
+
+        &__text
+            font-size: 11px
+
+        &-title
+            ul
+                gap: 10px
+
+        &-item
+            width: 200px
+            min-width: 200px
+            padding: 16px 20px
+            &__heading
+                font-size: 14px
+                line-height: 18.9px
+                &::after
+                    margin: 22px 0 17px
+
+            &__text
+                font-size: 12px
+                line-height: 18px
+
+        h3
+            margin-bottom: 15px
+
+        &__flags
+            margin-bottom: 27px
+
+    @media screen and ( max-width: 700px )
+        &__flags
+            margin-top: 13px
+        
+
 .timeline
     width: 49%
     border: 2px solid #ED1C25
@@ -321,7 +397,7 @@
     font-weight: 600
     color: #1E1E1E
     background-color: #fff
-    padding: 8px 0
+    padding: 7px 0
     margin-bottom: 15px
     min-height: 80px
     display: flex
@@ -358,6 +434,32 @@
 
         .timeline__time
             color: white
+
+    @media screen and ( max-width: 1000px )
+        border-width: 1px
+        border-left-width: 3px
+        min-height: 50px
+        padding: 4px 0
+        &::before
+            width: 52px
+
+        &__time
+            min-width: 51px
+            width: 51px
+            font-size: 10px
+            line-height: 15px
+            i
+                display: none
+
+        &__text
+            padding: 11px
+            border-width: 1px
+            font-size: 12px
+            line-height: 18px
+
+    @media screen and ( max-width: 700px )
+        width: 100%
+        margin-bottom: 5px
 
 .shelters
     padding: 150px 0 0
@@ -459,8 +561,6 @@
 @import 'footer'
 
 @media screen and ( max-width: 1100px )
-    .help,
-    .timeline,
     .shelters,
     .photos
         display: none
