@@ -4,8 +4,11 @@
 @import 'header'
 
 .main
-    padding: 130px 0 60px
-    margin-bottom: 55px
+    padding: 130px 0 105px
+    background-repeat: no-repeat
+    background-size: auto 91%
+    background-position: center center
+    background-image: url('../img/main__dots.svg')
     h1
         text-transform: uppercase
         color: $prime
@@ -215,10 +218,10 @@
     .container-wide
         margin-bottom: 50px
 
-    .fxw 
+    .fxw
         gap: 20px
 
-    &__pets 
+    &__pets
         display: block
         width: 100%
         margin-top: 50px
@@ -246,7 +249,7 @@
         text-align: center
         margin: 0
 
-    &-title 
+    &-title
         padding: 6px 0
         flex-direction: column
         align-items: flex-start
@@ -260,7 +263,7 @@
         text-align: right
         padding: 30px 0
         font-size: 14px
-        b 
+        b
             font-size: 16px
 
     &__descr
@@ -268,7 +271,7 @@
         font-size: 10px
         line-height: 15px
 
-    &__link 
+    &__link
         display: block
         font-size: 16px
         text-decoration: underline
@@ -285,3 +288,26 @@
             display: inline-block
             vertical-align: middle
             margin-right: 10px
+
+.photos
+    background-color: $sec
+    padding: 150px 0 75px
+    .container
+        &-wide
+            margin-bottom: 100px
+
+        &.fxw
+            gap: 20px
+            padding: 0 0 75px
+
+    &__img
+        display: block
+        width: calc( 33.33% - 14px )
+        img
+            display: block
+            width: 100%
+            aspect-ratio: 1/1
+            object-fit: cover
+            background-color: #fff
+
+@import 'footer'
