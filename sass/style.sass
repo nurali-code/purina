@@ -144,15 +144,22 @@
 
 .exhibition
     text-align: center
+    h2
+        max-width: 700px
+        margin: 0 auto 50px
+
     .fx
         align-items: stretch
+        gap: 20px
 
     &__icon
         display: block
-        margin: 0 auto
+        margin: 0 auto 30px
 
     &__heading
-        margin: 30px 0 25px
+        font-size: 22px
+        line-height: 33px
+        margin: 0 0 25px
         color: $prime
 
     &__text
@@ -187,6 +194,73 @@
         margin: 0 auto
         padding: 30px 25px 25px
         border-bottom: 1px solid $prime
+
+    @media screen and ( max-width: 1200px )
+        .container
+            padding: 0 40px
+
+        .fx
+            flex-wrap: wrap
+            max-width: 800px
+            margin: 0 auto
+            justify-content: center
+
+        &-item
+            order: 1
+            width: 48%
+
+        &-img
+            order: 2
+
+    @media screen and ( max-width: 700px )
+        padding: 35px 0 75px
+        h2 
+            margin-bottom: 15px
+
+        .fx
+            gap: 3px
+
+        &-item
+            padding: 20px
+            text-align: left
+            width: 100%
+            max-width: 100%
+            &.--second
+                order: 2
+
+        &-img 
+            width: 100%
+            display: flex
+            gap: 3px
+            img 
+                max-width: unset
+                width: calc( 50% - 1.5px )
+                max-height: unset
+                min-height: unset
+                margin: 0
+                object-fit: cover
+
+        &__icon
+            width: 21px
+            height: 21px
+            margin: 0
+
+        &__heading
+            font-size: 15px
+            line-height: 22.5px
+            margin: 0 0 20px
+            display: flex
+            align-items: center
+            gap: 11px
+
+        &__text
+            font-size: 10px
+            line-height: 14.5px
+
+        &-title 
+            font-size: 11px
+            line-height: 15.4px
+            padding: 20px 0
 
 .help
     margin-top: 60px
@@ -385,7 +459,6 @@
 @import 'footer'
 
 @media screen and ( max-width: 1100px )
-    .exhibition,
     .help,
     .timeline,
     .shelters,
