@@ -387,7 +387,6 @@
     @media screen and ( max-width: 700px )
         &__flags
             margin-top: 13px
-        
 
 .timeline
     width: 49%
@@ -474,6 +473,10 @@
         width: 100%
         margin-top: 50px
 
+    @media screen and ( max-width: 700px )
+        .fxw
+            gap: 8px
+
 .shelter
     padding: 22px 25px 24px 0
     display: flex
@@ -514,12 +517,21 @@
         b
             font-size: 16px
 
+        i
+            display: none
+
+    &__qr
+        margin: 10px 0
+        display: block
+        max-width: 90%
+
     &__descr
         text-align: center
         font-size: 10px
         line-height: 15px
 
     &__link
+        word-break: break-all
         display: block
         font-size: 16px
         text-decoration: underline
@@ -532,10 +544,107 @@
     &__tag
         font-size: 18px
         line-height: 27px
+        display: flex
+        align-items: center
+        gap: 13px
         img
-            display: inline-block
-            vertical-align: middle
-            margin-right: 10px
+            display: block
+
+    @media screen and ( max-width: 1000px )
+        width: 100%
+
+    @media screen and ( max-width: 700px )
+        display: block
+        padding: 15px 20px 
+        border-width: 1px
+        position: relative
+        z-index: 1
+        background-color: #FBFBFB
+        &.is__active
+            padding: 15px 20px 71px
+
+        .col
+            border: none
+            padding: 0
+            margin: 0
+            display: block
+
+        &__text
+            font-size: 10px
+            line-height: 150%
+            display: none
+            order: 2
+            margin-bottom: 18px
+
+        &-tags
+            order: 3
+            border-top: 1px solid #F5F1E5
+            width: 100%
+            gap: 11px
+            padding: 10px 0 0
+
+        &__tag
+            font-size: 12px
+            gap: 8px
+            img
+                width: 22px
+                
+
+        &-title
+            padding: 0
+
+        &__link
+            display: none
+            order: 1
+            font-size: 10px
+            line-height: 150%
+            margin-bottom: 14px
+
+        &__middle
+            display: none
+            text-align: left
+            font-size: 14px
+            padding: 14px 0px 18px
+            border-top: 1px solid #F5F1E5
+            position: absolute
+            bottom: 0
+            left: 20px
+            width: calc( 100% - 40px )
+            i
+                font-size: 8px
+                display: block
+                margin-bottom: 5px
+                font-style: normal
+
+            b
+                font-size: 14px
+                margin-right: 4px
+
+        &__qr,
+        &__descr
+            display: none
+
+        &__heading
+            position: relative
+            z-index: 1
+            padding: 3px 0 2px
+            margin-bottom: 8px
+            font-size: 16px
+            line-height: 130%
+            width: 100%
+            text-align: left
+            &::after
+                content: ''
+                width: 21px
+                height: 21px
+                position: absolute
+                top: 50%
+                margin-top: -10px
+                right: 0
+                display: block
+                background-repeat: no-repeat
+                background-position: center right
+                background-image: url('../img/arrow__down.svg')
 
 .photos
     background-color: $sec
@@ -561,6 +670,5 @@
 @import 'footer'
 
 @media screen and ( max-width: 1100px )
-    .shelters,
     .photos
         display: none
