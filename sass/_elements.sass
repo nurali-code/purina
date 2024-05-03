@@ -151,9 +151,10 @@ ul:not(.pagination)
             color: white
             border-color: $prime
             border-right: 1px solid $prime
+            pointer-events: none
 
         &:hover
-            color: $dark
+            color: $prime
             background-color: rgba(255, 255, 255, .8)
 
     li
@@ -168,13 +169,16 @@ ul:not(.pagination)
 
     h2
         font-size: 30px
-        line-height: 140%
+        line-height: 110%
 
     ul:not(.pagination)
         li
             background-size: 14px auto
             padding: 0 0 0 20px
             font-size: 12px
+
+    .pagination
+        padding: 45px 0
 
 @media screen and ( max-width: 1000px )
     section
@@ -202,3 +206,6 @@ ul:not(.pagination)
     h1
         font-size: 25px
         line-height: 37.5px
+
+    .pagination
+        padding: 20px 0

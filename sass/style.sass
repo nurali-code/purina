@@ -517,10 +517,11 @@
     display: flex
     border: 3px solid $prime
     width: calc( 50% - 10px )
-    transition: .3s ease all
+    transition: .2s ease all
     @media screen and ( min-width: 1000px )
         &:hover
-            transform: scale(1.02)
+            transform: scale(1.01)
+            background-color: #FBFBFB
 
     .col
         padding: 8px 20px
@@ -654,12 +655,12 @@
                 margin-bottom: 5px
                 font-style: normal
 
-            b, a 
+            b, a
                 font-weight: 700
                 font-size: 14px
                 margin-right: 4px
 
-            b 
+            b
                 text-decoration: underline
 
         &__qr,
@@ -689,7 +690,7 @@
                 background-position: center right
                 background-image: url('../img/arrow__down.svg')
 
-            br 
+            br
                 display: none
 
         &.is__active
@@ -705,8 +706,9 @@
             margin-bottom: 100px
 
         &.fxw
+            justify-content: flex-start
             gap: 20px
-            padding: 0 0 75px
+            padding: 0 15px 75px
 
     &__img
         display: block
@@ -718,8 +720,37 @@
             object-fit: cover
             background-color: #fff
 
-@import 'footer'
+    @media screen and ( max-width: 1100px )
+        padding: 75px 0
+        .container
+            &-wide
+                margin-bottom: 55px
 
-@media screen and ( max-width: 1100px )
-    .photos
-        display: none
+            &.fxw
+                gap: 15px
+                padding: 0 15px 45px
+
+        &__img
+            width: calc(33.33% - 10px)
+
+    @media screen and ( max-width: 700px )
+        padding: 55px 0 50px
+
+        .container
+            &-wide
+                gap: 12px
+                padding: 0 10px 22px
+                margin: 0
+                p
+                    font-size: 12px
+
+            &.fxw
+                gap: 3px
+
+        h2
+            padding-right: 11px
+
+        &__img
+            width: calc(33.33% - 2px)
+
+@import 'footer'

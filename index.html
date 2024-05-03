@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#ED1C25">
     <link rel="shortcut icon" href="favicon.jpg" type="image/jpg">
     <link rel="stylesheet" href="./fonts/stylesheet.css">
-    <link rel="stylesheet" href="./css/style.css?ver=12">
+    <link rel="stylesheet" href="./css/style.css?ver=15">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 
 </head>
@@ -19,11 +19,11 @@
             <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
             <button class="btn__menu"><span></span></button>
             <nav class="fx nav">
-                <a href="#" class="nav__link">Выставка</a>
-                <a href="#" class="nav__link">Ивент</a>
-                <a href="#" class="nav__link">Программа</a>
-                <a href="#" class="nav__link">Приюты</a>
-                <a href="#" class="nav__link">Фотографии</a>
+                <a href="#exhibition" class="nav__link">Выставка</a>
+                <a href="#event" class="nav__link">Ивент</a>
+                <a href="#program" class="nav__link">Программа</a>
+                <a href="#shelters" class="nav__link">Приюты</a>
+                <a href="#photos" class="nav__link">Фотографии</a>
                 <div class="soc fx">
                     <span class="soc__heading">Подписывайтесь на нас:</span>
                     <a href="#" target="_blank"><img src="img/inst.png" alt="inst"></a>
@@ -66,7 +66,7 @@
         </div>
     </main>
 
-    <section class="exhibition">
+    <section class="exhibition" id="exhibition">
         <div class="container">
             <h2>
                 Добро пожаловать <i>на выставку</i>
@@ -117,7 +117,7 @@
         </div>
     </section>
 
-    <section class="help">
+    <section class="help" id="event">
         <div class="container-wide fx">
             <h2>Давай <br> поможем</h2>
             <div class="help-title">
@@ -136,6 +136,7 @@
                 </ul>
             </div>
         </div>
+
         <div class="container">
             <h3>Главные события ярмарки</h3>
             <div class="fx help-items">
@@ -175,11 +176,13 @@
                 </div>
             </div>
         </div>
+
         <picture>
             <source media="(min-width: 700px)" srcset="img/flags.jpg">
             <img src="img/flags__mob.jpg" class="help__flags" loading="lazy" alt="flags">
         </picture>
-        <div class="container">
+
+        <div class="container" id="program">
             <h3>Программа фестиваля:</h3>
             <div class="fxw">
                 <p class="timeline">
@@ -247,7 +250,7 @@
         </div>
     </section>
 
-    <section class="shelters">
+    <section class="shelters" id="shelters">
         <div class="container-wide fx">
             <h2>Приюты</h2>
             <p>
@@ -273,14 +276,8 @@
                         них после выздоровления.
                     </p>
                     <div class="fx shelter-tags">
-                        <span class="shelter__tag">
-                            <img src="img/dog.svg" alt="dog" loading="lazy">
-                            170 собак
-                        </span>
-                        <span class="shelter__tag">
-                            <img src="img/cat.svg" alt="cat" loading="lazy">
-                            170 собак
-                        </span>
+                        <span class="shelter__tag"><img src="img/dog.svg" alt="dog">170 собак</span>
+                        <span class="shelter__tag"><img src="img/cat.svg" alt="cat">170 кошек</span>
                     </div>
                     <a class="shelter__link" target="_blank"
                         href="https://www.instagram.com/priut_amigo/?igsh=MTFqOG5lcmRqZXF2&utm_source=qr">instagram.com/priut_amigo</a>
@@ -310,7 +307,7 @@
                     </p>
                     <div class="fx shelter-tags">
                         <span class="shelter__tag"><img src="img/dog.svg" alt="dog"> 90 собак</span>
-                        <span class="shelter__tag"><img src="img/cat.svg" alt="cat"> 4 собак</span>
+                        <span class="shelter__tag"><img src="img/cat.svg" alt="cat"> 4 кошки</span>
                     </div>
                     <a class="shelter__link" target="_blank"
                         href="https://instagram.com/priyut_new_chance">instagram.com/priyut_new_chance</a>
@@ -339,7 +336,7 @@
                     </p>
                     <div class="fx shelter-tags">
                         <span class="shelter__tag"><img src="img/dog.svg" alt="dog"> 19 собак</span>
-                        <span class="shelter__tag"><img src="img/cat.svg" alt="cat"> 102 собак</span>
+                        <span class="shelter__tag"><img src="img/cat.svg" alt="cat"> 102 кошки</span>
                     </div>
                     <a class="shelter__link" target="_blank"
                         href="https://instagram.com/fond_kotopes">instagram.com/fond_kotopes</a>
@@ -367,7 +364,7 @@
                     </p>
                     <div class="fx shelter-tags">
                         <span class="shelter__tag"><img src="img/dog.svg" alt="dog"> 300 собак</span>
-                        <span class="shelter__tag"><img src="img/cat.svg" alt="cat"> 1 собак</span>
+                        <span class="shelter__tag"><img src="img/cat.svg" alt="cat"> 1 кошка</span>
                     </div>
                     <a class="shelter__link" target="_blank"
                         href="https://instagram.com/happy_pet">instagram.com/happy_pet</a>
@@ -446,7 +443,7 @@
         <img src="img/pets.jpg" class="shelters__pets" alt="pets" loading="lazy">
     </section>
 
-    <section class="photos">
+    <section class="photos" id="photos">
         <div class="container-wide fx">
             <h2>
                 <mark>Фотоотчет</mark> <br>
@@ -502,7 +499,7 @@
                 <a href="#" class="nav__link">Выставка</a>
                 <a href="#" class="nav__link">Ярмарка</a>
                 <a href="#" class="nav__link">Благотворительность</a>
-                <a href="#" class="nav__link">Фотографии</a>
+                <a href="#photos" class="nav__link">Фотографии</a>
                 <div class="soc fx">
                     <span class="soc__heading">Подписывайтесь на нас:</span>
                     <a href="#" target="_blank"><img src="img/inst.png" alt="inst"></a>
@@ -518,7 +515,7 @@
 
 
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js?ver=15"></script>
     <script defer src="js/jquery.fancybox.min.js"></script>
 
 </body>
