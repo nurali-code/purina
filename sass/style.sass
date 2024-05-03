@@ -270,7 +270,9 @@
         margin-bottom: 120px
 
     h2
-        padding-right: 30px
+        font-size: 55px
+        line-height: 100%
+        padding-right: 25px
 
     &__flags
         display: block
@@ -284,7 +286,8 @@
 
     &__text
         font-size: 19px
-        font-weight: 600
+        font-weight: 500
+        line-height: 160%
         margin: 0 0 18px
 
     &-items
@@ -315,6 +318,8 @@
 
     @media screen and ( max-width: 1200px )
         padding: 100px 0
+        h2
+            font-size: 35px
 
         &__text
             font-size: 16px
@@ -329,6 +334,8 @@
 
     @media screen and ( max-width: 1000px )
         padding: 55px 0 84px
+        h2
+            font-size: 30px
 
         &-items
             justify-content: flex-start
@@ -375,6 +382,7 @@
     @media screen and ( max-width: 700px )
         margin-top: 0
         h2
+            font-size: 25px
             margin-bottom: 10px
             padding: 0
             border: none
@@ -420,6 +428,8 @@
     align-items: center
     position: relative
     z-index: 1
+    transition: all ease .3s
+
     &::before
         content: ''
         display: block
@@ -440,16 +450,49 @@
         text-align: center
 
     &__text
-        padding: 17px
-        display: block
+        padding: 7px 17px
+        min-height: 60px
+        display: flex
+        align-items: center
+        justify-content: flex-start
         border-left: 2px solid #ED1C25
+        font-size: 18px
+        line-height: 150%
+        transition: all ease .3s
+        position: relative
+        z-index: 1
+
+        .heading
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 17px
+            transition: all ease .1s
+
+        .descr
+            opacity: 0
+            transition: all ease .2s
 
     &:hover
+        border-left-width: 2px
         &::before
             transform: scaleX(1)
 
-        .timeline__time
-            color: white
+        .heading
+            width: 100%
+            opacity: 0
+            visibility: hidden
+            text-align: left
+        .descr
+            text-align: left
+            width: 100%
+            font-size: 16px
+            font-weight: 500
+            opacity: 1
+
+        .timeline
+            &__time
+                color: white
 
     @media screen and ( max-width: 1000px )
         border-width: 1px
@@ -468,10 +511,24 @@
                 display: none
 
         &__text
-            padding: 11px
+            width: 100%
+            padding: 4px 4px 4px 10px
             border-width: 1px
             font-size: 12px
             line-height: 18px
+            font-weight: 600
+            min-height: 40px
+            .heading 
+                left: 10px
+            .descr
+                font-size: 12px
+                line-height: 13.5px
+
+        &:hover
+            border-left-width: 1px
+
+            .descr
+                font-size: 9px
 
     @media screen and ( max-width: 700px )
         width: 100%
