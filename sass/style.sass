@@ -315,26 +315,14 @@
 
     @media screen and ( max-width: 1200px )
         padding: 100px 0
-        .container
-            &-wide
-                display: block
-                margin-bottom: 55px
 
         &__text
+            font-size: 16px
+            font-weight: 400
             margin-bottom: 21px
 
         ul
-            width: 100vw
-            position: relative
-            left: -15px
-            padding: 0 15px
-            overflow-x: scroll
-            -ms-overflow-style: none
-            scrollbar-width: none
-            &::-webkit-scrollbar
-                display: none
-                width: 0
-                height: 0
+            flex-wrap: wrap
             li
                 width: fit-content
                 white-space: nowrap
@@ -365,8 +353,8 @@
                 gap: 10px
 
         &-item
-            width: 200px
-            min-width: 200px
+            width: 250px
+            min-width: 250px
             padding: 16px 20px
             &__heading
                 font-size: 14px
@@ -385,8 +373,37 @@
             margin-bottom: 27px
 
     @media screen and ( max-width: 700px )
+        margin-top: 0
+        h2
+            margin-bottom: 10px
+            padding: 0
+            border: none
+
+        .container
+            &-wide
+                display: block
+                margin-bottom: 55px
+
+        ul
+            flex-wrap: nowrap
+            position: relative
+            left: -15px
+            padding: 0 15px
+            width: 100vw
+            overflow-x: scroll
+            -ms-overflow-style: none
+            scrollbar-width: none
+            &::-webkit-scrollbar
+                display: none
+                width: 0
+                height: 0
+
         &__flags
             margin-top: 13px
+
+        &-item
+            width: 200px
+            min-width: 200px
 
 .timeline
     width: 49%
@@ -473,9 +490,27 @@
         width: 100%
         margin-top: 50px
 
+    @media screen and ( max-width: 1000px )
+        padding: 70px 0 0
+
     @media screen and ( max-width: 700px )
+        padding: 56px 0 0
+        .container-wide
+            gap: 12px
+            margin-bottom: 18px
+            p
+                font-size: 12px
+
+        h2
+            padding-right: 11px
+
         .fxw
             gap: 8px
+
+        &__pets
+            margin-top: 10px
+            height: 27vw
+            object-fit: cover
 
 .shelter
     padding: 22px 25px 24px 0
@@ -483,8 +518,10 @@
     border: 3px solid $prime
     width: calc( 50% - 10px )
     transition: .3s ease all
-    &:hover
-        transform: scale(1.02)
+    @media screen and ( min-width: 1000px )
+        &:hover
+            transform: scale(1.02)
+
     .col
         padding: 8px 20px
         flex-direction: column
@@ -555,7 +592,7 @@
 
     @media screen and ( max-width: 700px )
         display: block
-        padding: 15px 20px 
+        padding: 15px 20px
         border-width: 1px
         position: relative
         z-index: 1
@@ -588,7 +625,6 @@
             gap: 8px
             img
                 width: 22px
-                
 
         &-title
             padding: 0
