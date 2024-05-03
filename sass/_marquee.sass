@@ -1,0 +1,36 @@
+.marquee
+    @media screen and ( min-width: 700px )
+        [aria-hidden="true"]
+            display: none
+    @media screen and ( max-width: 700px )
+        text-align: center
+        position: relative
+        z-index: 1
+        display: flex
+        gap: 10px
+        overflow: hidden
+        flex-wrap: nowrap
+        position: relative
+        left: -15px
+        padding: 0 15px
+        width: 100vw
+        &-content
+            list-style: none
+            justify-content: space-between
+            animation: scroll 10s linear infinite
+            overflow: hidden
+            flex-shrink: 0
+            &.reverce
+                animation: scroll 10s linear infinite reverse
+
+        &:hover
+            .marquee
+                &-content
+                    animation-play-state: paused
+
+    @keyframes scroll
+        from
+            transform: translateX(0)
+
+        to
+            transform: translateX(calc(-100%))

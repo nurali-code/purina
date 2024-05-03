@@ -145,6 +145,8 @@
 .exhibition
     text-align: center
     h2
+        font-size: 35px
+        line-height: 150%
         max-width: 700px
         margin: 0 auto 50px
 
@@ -196,6 +198,9 @@
         border-bottom: 1px solid $prime
 
     @media screen and ( max-width: 1200px )
+        h2
+            font-size: 30px
+
         .container
             padding: 0 40px
 
@@ -216,6 +221,7 @@
         padding: 35px 0 75px
         h2
             margin-bottom: 15px
+            font-size: 16px
 
         .fx
             gap: 3px
@@ -262,6 +268,8 @@
             line-height: 15.4px
             padding: 20px 0
 
+@import 'marquee'
+
 .help
     margin-top: 60px
     padding: 150px 0
@@ -270,8 +278,6 @@
         margin-bottom: 120px
 
     h2
-        font-size: 55px
-        line-height: 100%
         padding-right: 25px
 
     &__flags
@@ -318,8 +324,6 @@
 
     @media screen and ( max-width: 1200px )
         padding: 100px 0
-        h2
-            font-size: 35px
 
         &__text
             font-size: 16px
@@ -334,8 +338,6 @@
 
     @media screen and ( max-width: 1000px )
         padding: 55px 0 84px
-        h2
-            font-size: 30px
 
         &-items
             justify-content: flex-start
@@ -382,8 +384,7 @@
     @media screen and ( max-width: 700px )
         margin-top: 0
         h2
-            font-size: 25px
-            margin-bottom: 10px
+            margin-bottom: 20px
             padding: 0
             border: none
 
@@ -393,18 +394,7 @@
                 margin-bottom: 55px
 
         ul
-            flex-wrap: nowrap
-            position: relative
-            left: -15px
-            padding: 0 15px
-            width: 100vw
-            overflow-x: scroll
-            -ms-overflow-style: none
-            scrollbar-width: none
-            &::-webkit-scrollbar
-                display: none
-                width: 0
-                height: 0
+            
 
         &__flags
             margin-top: 13px
@@ -467,9 +457,10 @@
             top: 50%
             transform: translateY(-50%)
             left: 17px
-            transition: all ease .1s
+            transition: all ease .2s
 
         .descr
+            font-size: 16px
             opacity: 0
             transition: all ease .2s
 
@@ -486,7 +477,6 @@
         .descr
             text-align: left
             width: 100%
-            font-size: 16px
             font-weight: 500
             opacity: 1
 
@@ -518,17 +508,15 @@
             line-height: 18px
             font-weight: 600
             min-height: 40px
-            .heading 
+            .heading
                 left: 10px
+
             .descr
-                font-size: 12px
+                font-size: 9px
                 line-height: 13.5px
 
         &:hover
             border-left-width: 1px
-
-            .descr
-                font-size: 9px
 
     @media screen and ( max-width: 700px )
         width: 100%
@@ -761,6 +749,9 @@
     .container
         &-wide
             margin-bottom: 100px
+            p
+                font-size: 20px
+                font-weight: 600
 
         &.fxw
             justify-content: flex-start
@@ -782,6 +773,8 @@
         .container
             &-wide
                 margin-bottom: 55px
+                p
+                    font-size: 16px
 
             &.fxw
                 gap: 15px
@@ -800,6 +793,7 @@
                 margin: 0
                 p
                     font-size: 12px
+                    font-weight: 500
 
             &.fxw
                 gap: 3px
